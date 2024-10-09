@@ -4,9 +4,11 @@
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  box-sizing: border-box;
 }
-.container{
-    border:1px solid black
+
+.container {
+  border: 1px solid black;
 }
 .form {
   display: flex;
@@ -17,10 +19,10 @@
   padding: 10px;
   margin: auto;
   border-radius: 10px;
-  background-color:white;
+  background-color: white;
   z-index: 2;
 }
-label{
+label {
   font-weight: 550;
 }
 
@@ -31,7 +33,8 @@ label{
 }
 .input-div input {
   width: 200px;
-  border: 0.5px solid grey;
+  border: none;
+  border-bottom: 0.5px solid rgb(141, 106, 151);
   height: 25px;
   outline: none;
   padding-left: 5px;
@@ -47,60 +50,134 @@ label{
   border-radius: 10px;
   border: transparent;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
-  color: rgb(169,73,196);
+  color: rgb(169, 73, 196);
 }
-.btn:hover{
-    color: white;
-    background-color: rgb(169,73,196)
+.btn:hover {
+  color: white;
+  background-color: rgb(169, 73, 196);
 }
 
-
-.buttons{
-    display: flex;
+.buttons {
+  display: flex;
 }
-.main{
-  /* background: url('https://img.freepik.com/premium-vector/realistic-neon-lights-vector-background_1162942-1321.jpg?w=1060') no-repeat; */
-  background: linear-gradient(180deg, rgb(169,73,196), rgb(235,75,207));;
-  /* background-size: cover;
-  background-attachment: fixed; */
+.main {
+  background: linear-gradient(180deg, rgb(169, 73, 196), rgb(235, 75, 207));
   height: 100vh;
+  max-height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
   display: flex;
   align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  position: relative;
 }
-.container{
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 10px;
-    width: 80vw;
-    background-color: white;
+.logo {
+  cursor: pointer;
+}
+.menu ul {
+  display: flex;
+  gap: 40px;
+}
+.menu ul li {
+  list-style: none;
+}
+.nav-items a:hover {
+  text-decoration: underline rgb(79, 26, 107);
+  text-underline-offset: 10px;
+  border-radius: 10px;
+  font-weight: 900;
+  cursor: pointer;
 }
 
-.left{
-  background: url('https://images.unsplash.com/photo-1493219686142-5a8641badc78?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat;
-  background-size:contain;
+.nav-items a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  font-weight: 600;
+}
+.menu-icon i {
+  font-size: 30px;
+  display: none;
+}
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  width: 80vw;
+  background-color: white;
+}
+
+.left {
+  background: url("https://images.unsplash.com/photo-1493219686142-5a8641badc78?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat;
+  background-size: contain;
   background-attachment: fixed;
   width: 45vw;
   border-radius: 10px;
   height: 450px;
   margin: auto 0;
-
 }
-.head{
-  margin:5.5em auto;
+.head {
+  margin: 5.5em auto;
   text-align: center;
   font-style: italic;
 }
-.right{
+.right {
   width: 50vw;
   height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+#menuList {
+  height: 300px;
+  border: 2px solid red;
+}
 
+@media screen and (max-width: 800px) {
+  .menu-icon i {
+    display: block;
+  }
+  .menu ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgb(169, 73, 196), rgb(235, 75, 207));
+  }
+  #menuList {
+    transition: all 1s;
+  }
+  .main {
+    height: 100%;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+  .left {
+    width: 100%;
+    background-size: cover;
+  }
+  .right {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+  }
+  .input-div{
+    flex-wrap: wrap;
+  }
+}
