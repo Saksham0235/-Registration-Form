@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.container{
+    border:1px solid black
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+  justify-content: space-around;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px grey;
+  margin: auto;
+  border-radius: 10px;
+  background-color:white;
+  z-index: 2;
+}
+
+.input-div {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.input-div input {
+  width: 200px;
+  border: 0.5px solid grey;
+  height: 25px;
+  outline: none;
+  padding-left: 5px;
+}
+::placeholder {
+  color: grey;
+  padding-left: 5px;
+}
+.btn {
+  width: 200px;
+  margin: 0 auto;
+  height: 30px;
+  border-radius: 10px;
+  border: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(17,12,65);
+}
+
+
+.buttons{
+    display: flex;
+}
+.main{
+    background-color: green;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('https://img.freepik.com/premium-vector/realistic-neon-lights-vector-background_1162942-1321.jpg?w=1060') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
