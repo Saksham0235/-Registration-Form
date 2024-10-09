@@ -47,10 +47,11 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 15px;
+  color: rgb(169,73,196);
 }
 .btn:hover{
     color: white;
-    background-color: rgb(17,12,65);
+    background-color: rgb(169,73,196)
 }
 
 
@@ -58,12 +59,46 @@
     display: flex;
 }
 .main{
-    background-color: green;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url('https://img.freepik.com/premium-vector/realistic-neon-lights-vector-background_1162942-1321.jpg?w=1060') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 1;
+  /* background: url('https://img.freepik.com/premium-vector/realistic-neon-lights-vector-background_1162942-1321.jpg?w=1060') no-repeat; */
+  background: linear-gradient(180deg, rgb(169,73,196), rgb(235,75,207));;
+  /* background-size: cover;
+  background-attachment: fixed; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    width: 80vw;
+    background-color: white;
+}
+
+.left{
+  background: url('https://images.unsplash.com/photo-1493219686142-5a8641badc78?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat;
+  background-size:contain;
+  background-attachment: fixed;
+  width: 45vw;
+  border-radius: 10px;
+  height: 450px;
+  margin: auto 0;
+
+}
+.head{
+  margin:5.5em auto;
+  text-align: center;
+  font-style: italic;
+}
+.right{
+  width: 50vw;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
