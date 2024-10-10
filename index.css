@@ -75,7 +75,6 @@ label {
   align-items: center;
   padding: 10px;
   justify-content: space-between;
-  position: relative;
 }
 .logo {
   cursor: pointer;
@@ -144,7 +143,7 @@ label {
   border: 2px solid red;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 947px) {
   .menu-icon i {
     display: block;
   }
@@ -156,7 +155,7 @@ label {
     flex-direction: column;
     text-align: center;
     overflow: hidden;
-    background: linear-gradient(0deg, rgb(169, 73, 196), rgb(235, 75, 207));
+    background: linear-gradient(0deg, rgb(171,73,196), rgb(171,73,196));
   }
   #menuList {
     transition: all 1s;
